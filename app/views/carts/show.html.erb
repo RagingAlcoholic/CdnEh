@@ -3,8 +3,10 @@
 <% end %>
 
 <h2> Your Shopping Cart</h2>
-<ul>
+<section class="cart-item">
   <% @cart.cart_items.each do |item| %>
-    <li><%= item.product.name %></li>
-  <% end %>
-</ul>
+    <p><%= item.product.name %></p>
+    <p>Quantity: <%= item.quantity %> @ <%= number_to_currency(item.product.price) %> ea.</p>
+    <p>Total: <%= number_to_currency(item.product.price * item.quantity) %></p>
+  <% end %>  
+</section>
