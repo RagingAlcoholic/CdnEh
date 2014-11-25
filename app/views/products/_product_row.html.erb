@@ -2,14 +2,15 @@
 
   <h4><%= link_to product.name, product_path(product.id) %></h4>  
   <%= form_for order_item, remote: true do |f| %>
-    <h4>Price: <span style="color: green"><%= number_to_currency product.price %></span></h4>
-    <%= image_tag product.image %>
-    <%= f.number_field :quantity, value: 1, min: 1 %>
-    <%= f.hidden_field :product_id, value: product.id %>
-    
+    <h4>Price: <span style="color: #32CD32 "><%= number_to_currency product.price %></span></h4>
+    <p class="centered-image">
+      <%= image_tag product.image %>
+    </p>
     <% if product.stock < 1 %>
-      <%= f.submit "Add to Cart", :disabled => true, data: {disable_with: "Out of Stock!"} %>
+      <h3>Out of Stock!</h3>
     <% else %>
+      <%= f.number_field :quantity, value: 1, min: 1 %>
+      <%= f.hidden_field :product_id, value: product.id %>
       <%= f.submit "Add to Cart" %>
     <% end %>
   <% end %>

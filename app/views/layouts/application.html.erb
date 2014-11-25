@@ -19,9 +19,14 @@
             <li><%= render 'layouts/cart_text' %></li>
           </ul>
         </nav>
-        <%= image_tag "bark.png", :id => "divider" %>
       </header>
-      <%= yield %>
+      <%= image_tag "bark.png", :id => "divider" %>
+      <section id="content">
+        <%= yield %>
+      </section>
+      <footer>
+        <p>Created by David Shack</p>
+      </footer>
     </section>
   </body>
 </html>

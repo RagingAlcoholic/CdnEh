@@ -14,24 +14,23 @@
  *= require_self
  */
 
-.in-stock {
-    color: green;
-}
-
-.out-of-stock {
-    color: red;
-}
 
 #wrapper {
-    height: 100vh;
+    height: 100%;
     width: 1000px;
     margin: 0px auto;
-    background-color: #B4D8E7;
-    padding: 10px;
+    background-color: #fff;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
 }
 
 body {
-    background-color: #56BAEC;
+    background-color: #FF0000;
+}
+
+header {
+    min-height: 100px;
+    padding: 10px;
 }
 
 nav {
@@ -56,10 +55,35 @@ h1 {
 }
 
 #divider {
-    width: 1020px;
+    width: 1000px;
     height: 15px;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-    margin-left: -10px;
+}
+
+#content {
+    padding: 10px;
+    height: 1000px;
+}
+
+footer {
+    width: 1000px;
+    border-top: 2px solid black;
+}
+
+
+.in-stock {
+    color: green;
+}
+
+.out-of-stock {
+    color: red;
+}
+
+.centered-image {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
 }
 
