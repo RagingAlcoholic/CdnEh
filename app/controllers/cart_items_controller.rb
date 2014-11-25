@@ -13,7 +13,7 @@ class CartItemsController < InheritedResources::Base
     
     respond_to do |format|
       if @cart_item.save
-        format.html { redirect_to @cart_item.cart, notice: 'Cart item was sucessfully created.'}
+        format.html { redirect_to @cart_item.cart }
         format.json { render action: 'show', status: :created, location: @cart_item }
       else
         format.html { render action: 'new'}
@@ -25,7 +25,7 @@ class CartItemsController < InheritedResources::Base
   private
 
     def cart_item_params
-      params.require(:cart_item).permit(:product, :cart_id)
+      params.require(:cart_item).permit(:product_id)
     end
 end
 
