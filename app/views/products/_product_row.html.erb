@@ -1,22 +1,16 @@
-<div>
+<div class="product">
 
-  <div>
-    <div>
-      <h4><%= product.name %></h4>
-    </div>
-    <div>
-      
-      <%= form_for order_item, remote: true do |f| %>
-      <h4>Unit Price: <span style="color: green"><%= number_to_currency product.price %></span></h4>
-        <div class="input-group">
-          <%= f.number_field :quantity, value: 1, min: 1 %>
-          <div>
-            <%= f.hidden_field :product_id, value: product.id %>
-            <%= f.submit "Add to Cart" %>
-          </div>
-        </div>
-      <% end %>
-    </div>
+  <h4><%= link_to product.name, product_path(product.id) %></h4>  
+  <%= form_for order_item, remote: true do |f| %>
+    <h4>Price: <span style="color: green"><%= number_to_currency product.price %></span></h4>
+    <%= image_tag product.image %>
+    <%= f.number_field :quantity, value: 1, min: 1 %>
+    <%= f.hidden_field :product_id, value: product.id %>
     
-  </div>
+    <% if product.stock < 1 %>
+      <%= f.submit "Add to Cart", :disabled => true, data: {disable_with: "Out of Stock!"} %>
+    <% else %>
+      <%= f.submit "Add to Cart" %>
+    <% end %>
+  <% end %>
 </div>

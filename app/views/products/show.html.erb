@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Sku:</strong>
-  <%= @product.sku %>
-</p>
-
-<p>
   <strong>Name:</strong>
   <%= @product.name %>
+  <% if @product.stock > 0 %>
+    <strong class="in-stock"> - In Stock!</strong>
+  <% else %>
+    <strong class="out-of-stock"> - Out of Stock!</strong>
+  <% end %>
 </p>
 
 <p>
@@ -15,25 +15,14 @@
   <%= @product.price %>
 </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+<ul>
+  
+  <% @product.description.each_line do |line| %>
+    <li><% line.chomp %></li>
+  <% end %>
+  
+</ul>
+    
+  <%= image_tag(@product.image) %>
 
-<p>
-  <strong>Image:</strong>
-  <%= @product.image %>
-</p>
 
-<p>
-  <strong>Stock:</strong>
-  <%= @product.stock %>
-</p>
-
-<p>
-  <strong>Categoryid:</strong>
-  <%= @product.categoryID %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
