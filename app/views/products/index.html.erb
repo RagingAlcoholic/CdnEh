@@ -3,5 +3,18 @@
 </section>
 
 <% @products.each do |product| %>
-  <%= render "product_row", product: product, order_item: @order_item %>
+  <div class="product">
+  
+    <h4><%= link_to product.name, product_path(product.id) %></h4>  
+    <h4>Price: <span style="color: #32CD32"><%= number_to_currency product.price %></span></h4>
+    <p class="centered-image">
+      <%= image_tag product.image %>
+    </p>
+    <% if product.stock < 1 %>
+      <h3>Out of Stock!</h3>
+    <% else %>
+      <%= number_field :quantity, value: 1, min: 1 %>
+      <%= button_to "Add to Cart", cart_items_path(product_id: product) %>
+    <% end %>
+  </div>
 <% end %>

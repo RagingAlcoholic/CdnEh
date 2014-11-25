@@ -1,3 +1,10 @@
-<div class="shopping-cart">
-  <%= render "shopping_cart" %>
-</div>
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
+<h2> Your Shopping Cart</h2>
+<ul>
+  <% @cart.cart_items.each do |item| %>
+    <li><%= item.product.name %></li>
+  <% end %>
+</ul>

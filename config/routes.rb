@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  resources :cart_items
+
+  resources :carts
+
+  resources :sale_items
+
   resources :categories
 
   resources :products, only: [:index]

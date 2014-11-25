@@ -21,16 +21,16 @@ div img {
     height: auto;
 }
 
-#order_item_quantity {
-    width: 50px;
+.product input[type="number"] {
+    width: 70px;
     margin-right: 10px;
 }
 
-form h4 {
+.product h4 {
     color: white;
 }
 
-#order_item_quantity, input[type="submit"] {
+.product input[type="number"], .product input[type="submit"] {
   margin-top: 20px;  
 }
 
@@ -40,7 +40,7 @@ form h4 {
     margin-bottom: 10px;
 }
 
-form h3 {
+.product h3 {
     margin-top: 20px;
     padding-left: 30px;
 

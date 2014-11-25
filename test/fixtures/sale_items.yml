@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item: 
+  sale_price: 1.5
+  deadline: 2014-11-25 10:05:10
+
+two:
+  item: 
+  sale_price: 1.5
+  deadline: 2014-11-25 10:05:10
