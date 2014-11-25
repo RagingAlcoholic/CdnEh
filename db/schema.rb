@@ -11,19 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141125152254) do
-
-  create_table "Products", force: true do |t|
-    t.string   "sku"
-    t.string   "name"
-    t.float    "price"
-    t.text     "description"
-    t.string   "image"
-    t.integer  "stock"
-    t.integer  "categoryID"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20141125154548) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -94,5 +82,19 @@ ActiveRecord::Schema.define(version: 20141125152254) do
   end
 
   add_index "orders", ["order_status_id"], name: "index_orders_on_order_status_id"
+
+  create_table "products", force: true do |t|
+    t.string   "sku"
+    t.string   "name"
+    t.float    "price"
+    t.text     "description"
+    t.string   "image"
+    t.integer  "stock"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "category_id"
+  end
+
+  add_index "products", ["category_id"], name: "index_products_on_category_id"
 
 end

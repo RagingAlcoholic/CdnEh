@@ -6,27 +6,11 @@
   <%= javascript_include_tag "customjsFile", "data-turbolinks-track" => true  %>
 
   <%= csrf_meta_tags %>
-</head>
-  <body>
-    <section id="wrapper">
-      <header>
-        <h1>Canadian EHsclusives</h1>
-        <nav>
-          <ul>
-            <li><%= link_to "Home", root_path %></li>
-            <li><%= link_to "Products", products_path %></li>
-            <li><%= link_to "Contact" %></li>
-            <li><%= render 'layouts/cart_text' %></li>
-          </ul>
-        </nav>
-      </header>
-      <%= image_tag "bark.png", :id => "divider" %>
-      <section id="content">
-        <%= yield %>
-      </section>
-      <footer>
-        <p>Created by David Shack</p>
-      </footer>
+  
+    <%= render "shared/header" %>
+    
+    <section id="content">
+      <%= yield %>
     </section>
-  </body>
-</html>
+    
+    <%= render "shared/footer" %>

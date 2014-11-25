@@ -1,0 +1,15 @@
+</head>
+  <body>
+    <section id="wrapper">
+      <header>
+        <h1>Canadian EHsclusives</h1>
+        <nav>
+          <ul>
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Products", products_path %></li>
+            <li><%= link_to "Contact" %></li>
+            <li><%= render 'layouts/cart_text' %></li>
+          </ul>
+        </nav>
+      </header>
+      <%= image_tag "bark.png", :id => "divider" %>
