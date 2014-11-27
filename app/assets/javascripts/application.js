@@ -12,5 +12,15 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui/effect-blind
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+   $('#cart').hide(); 
+});
+
+function ToggleCart() {
+   $('#cart').toggle("slow", function() {
+   }); 
+}

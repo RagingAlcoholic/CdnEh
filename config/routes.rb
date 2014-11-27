@@ -16,5 +16,5 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   resources :products
 
-  root :to => "home#index"
+  root :to => "products#index"
 end

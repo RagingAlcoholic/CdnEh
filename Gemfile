@@ -33,6 +33,10 @@ gem 'devise'
 
 gem 'tzinfo-data'
 
+gem 'jquery-ui-rails'
+
+gem 'rubocop', require: false
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -1,0 +1,16 @@
+<% unless cart.cart_items.empty? %>
+  <h2> Your Cart</h2>
+  <section>
+    <table>
+      <%= render(@cart.cart_items) %>
+      <tr>
+        <td />
+        <td />
+        <td>Cart Total: <%= number_to_currency(cart.total_price) %></td>
+      </tr>
+    </table>
+  </section>
+  
+  
+  <%= button_to 'Empty Cart', cart, method: :delete, data: { confirm: 'Are you sure?'} %>
+<% end %>

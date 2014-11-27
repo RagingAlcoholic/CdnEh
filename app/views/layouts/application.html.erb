@@ -3,12 +3,11 @@
 <head>
   <title>Canadian EHsclusives</title>
   <%= stylesheet_link_tag    'application' %>
-  <%= javascript_include_tag "customjsFile", "data-turbolinks-track" => true  %>
+  <%= javascript_include_tag 'application' %>
 
   <%= csrf_meta_tags %>
   
     <%= render "shared/header" %>
-    
     <section id="content">
       <%= yield %>
     </section>
