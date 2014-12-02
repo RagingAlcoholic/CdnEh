@@ -1,23 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  subtotal: 
-  subtotal: 
-  tax: 
-  tax: 
-  shipping12: MyString
-  shipping3: MyString
-  total: 
-  total: 
-  order_status_id: 
+  name: MyString
+  address: MyText
+  email: MyString
+  pay_type: MyString
 
 two:
-  subtotal: 
-  subtotal: 
-  tax: 
-  tax: 
-  shipping12: MyString
-  shipping3: MyString
-  total: 
-  total: 
-  order_status_id: 
+  name: MyString
+  address: MyText
+  email: MyString
+  pay_type: MyString

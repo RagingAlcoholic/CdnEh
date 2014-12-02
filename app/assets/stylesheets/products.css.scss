@@ -9,29 +9,35 @@
     padding: 10px;
     border-radius: 10px;
     background-color: #FF0000;
+    margin-bottom: 20px;
 }
 
-.product:nth-of-type(3n + 2) {
-    margin-left: 12px;
-    margin-right: 12px;
+.product a {
+    color: black !important;
 }
+
+.product:nth-of-type(4n + 2) {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+ .product:nth-of-type(4n + 3) {
+    margin-right: 20px;
+ }
 
 div img {
     max-width: 150px;
     height: auto;
 }
 
-.product input[type="number"] {
-    width: 70px;
-    margin-right: 10px;
-}
-
 .product h4 {
     color: white;
+    text-decoration: none !important;
 }
 
-.product input[type="number"], .product input[type="submit"] {
-  margin-top: 20px;  
+.product input[type="submit"] {
+  margin-top: 20px;
+  margin-left: 45px;
 }
 
 #filter {

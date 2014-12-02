@@ -9,11 +9,11 @@
             <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "Products", products_path %></li>
             <li><%= link_to "Contact" %></li>
-            <%= render 'cart_count' %>
+            <%= render 'cart_items/cart_count' %>
           </ul>
         </nav>
       </header>
       <section id="cart">
         <%= render @cart %>
       </section>
-      <%= image_tag "bark.png", :id => "divider" %>
+      <%= image_tag "bark.png", :class => "divider" %>

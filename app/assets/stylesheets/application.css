@@ -48,14 +48,14 @@ nav li {
 }
 
 nav a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 h1 {
     float: left;
 }
 
-#divider {
+.divider {
     width: 1000px;
     height: 15px;
     border-top: 2px solid black;
@@ -69,7 +69,6 @@ h1 {
 
 footer {
     width: 1000px;
-    border-top: 2px solid black;
 }
 
 .in-stock {

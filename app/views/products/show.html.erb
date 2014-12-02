@@ -1,7 +1,4 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Name:</strong>
   <%= @product.name %>
   <% if @product.stock > 0 %>
     <strong class="in-stock"> - In Stock!</strong>
@@ -14,15 +11,8 @@
   <strong>Price:</strong>
   <%= @product.price %>
 </p>
+ 
+<%= image_tag(@product.image) %>
 
-<ul>
-  
-  <% @product.description.each_line do |line| %>
-    <li><% line.chomp %></li>
-  <% end %>
-  
-</ul>
-    
-  <%= image_tag(@product.image) %>
-
+<%= button_to "Add to Cart", cart_items_path(product_id: @product), remote: true %>
 

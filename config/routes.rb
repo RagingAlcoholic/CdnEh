@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :orders
+
   resources :cart_items
 
   resources :carts
@@ -16,5 +18,5 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   resources :products
 
-  root :to => "products#index"
+  root to: 'products#index'
 end

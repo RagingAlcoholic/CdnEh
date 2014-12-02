@@ -1,5 +1,4 @@
 class CartItemsController < InheritedResources::Base
-
   include CurrentCart
 
   before_action :set_cart, only: [:create]
@@ -18,9 +17,11 @@ class CartItemsController < InheritedResources::Base
         format.json { render action: 'show', status: :created, location: @cart_item }
       else
         format.html { render action: 'new' }
-        format.json { render json: @cart_item_errors, status:
-                      :unprecessable_entity }
-      end      
+        format.json do
+          render json: @cart_item_errors, status:
+                      :unprecessable_entity
+        end
+      end
     end
   end
 

@@ -8,8 +8,8 @@ class CartsController < InheritedResources::Base
     session[:cart_id] = nil
 
     respond_to do |format|
-      format.html { redirect_to cart_url,
-        notice: 'Your cart is currently empty' }
+      format.html { redirect_to cart_url }
+      format.js
       format.json { head :no_content }
     end
   end
@@ -21,7 +21,7 @@ class CartsController < InheritedResources::Base
   end
 
   def cart_params
-    params.require(:cart).permit()
+    params.require(:cart).permit
   end
 
   def invalid_cart
@@ -30,4 +30,3 @@ class CartsController < InheritedResources::Base
     redirect_to root_url, notice: 'Invalid cart'
   end
 end
-

@@ -21,6 +21,6 @@ $(document).ready(function() {
 });
 
 function ToggleCart() {
-   $('#cart').toggle("slow", function() {
+   $('#cart').slideToggle("fast", function() {
    }); 
 }
